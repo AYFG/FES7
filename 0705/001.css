@@ -1,0 +1,16 @@
+#sec1{
+    color:red;
+}
+#sec2{
+    color:blue;
+}
+.br-span{
+    display: block;
+    height: 20px;
+}
+.ko{
+    word-break: keep-all;
+}
+#i-tag{
+    color:blue
+}
