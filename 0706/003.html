@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      p {
+        font-family: "Noto Sans KR", sans-serif;
+        font-weight: 700;
+        text-align: center;
+        vertical-align: middle;
+        line-height: 1.6;
+        /* letter-spacing: 10px; */
+        /* word-spacing: 40px; */
+        text-indent: 10px;
+        background-color: aquamarine;
+        /* 1줄 말줄임 처리 */
+        /* white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+         */
+        /* 여러줄 말줄임 */
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+
+        font-style: italic;
+      }
+      p::first-letter {
+        text-transform: capitalize;
+        font-size: 40px;
+      }
+
+      .fes7 {
+        text-transform: capitalize;
+        /* text-decoration: orange underline wavy 3px; */
+        text-decoration-color: orange;
+        text-decoration-line: underline;
+        text-decoration-style: wavy;
+        text-decoration-thickness: 2px;
+      }
+      .tx-shadow {
+        text-shadow: -6px -5px 2px coral, 6px 5px 2px coral;
+        box-shadow: 4px, 4px, 0px aqua;
+      }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae explicabo,
+      distinctio, eos et eaque neque officiis veniam alias est praesentium
+      consequatur rem laborum ipsa! Vero ipsa explicabo cupiditate natus ad!
+    </p>
+    <p class="fes7">Frontend school</p>
+    <p class="tx-shadow">Text-Shadow</p>
+  </body>
+</html>
