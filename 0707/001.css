@@ -1,0 +1,17 @@
+p#id1 {
+  color: black;
+}
+div #id1 {
+  color: green;
+}
+#id1 {
+  color: blue;
+}
+
+.class {
+  color: hotpink;
+}
+/* !important 사용은 좋지 못하다. 오류나 버그 발생 시 수정을 어렵게 만든다. */
+/* * {
+  color: royalblue !important;
+} */

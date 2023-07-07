@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boxmodel2마진병합</title>
+    <style>
+      .box4,
+      .box5,
+      .box6 {
+        width: 100px;
+        height: 100px;
+      }
+      .box4 {
+        background-color: royalblue;
+        margin: 40px;
+      }
+      .box5 {
+        background-color: salmon;
+        margin: 60px;
+      }
+      .box6 {
+        background-color: gold;
+        width: 100px;
+        height: 100px;
+      }
+      span {
+        background-color: slateblue;
+        margin: 20px;
+      }
+      .parent {
+        background-color: skyblue;
+        /* border: 1px solid transparent;
+         */
+        /* padding: 20px; */
+      }
+      .child {
+        width: 100px;
+        height: 100px;
+        margin: 20px;
+        background-color: slategray;
+      }
+      .parent {
+        position: relative;
+        /* overflow-x: auto;
+        overflow-y: hidden; */
+      }
+      .tooltip {
+        width: 400px;
+        height: 500px;
+        position: absolute;
+        top: 70px;
+        left: 7 0px;
+        background-color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box4">box4</div>
+    <div class="box5">box5</div>
+    <div class="box6">box6</div>
+    <span>span1</span>
+    <span>span2</span>
+    <span>span3</span>
+    <div class="parent">
+      parents
+      <div class="child">child</div>
+      <div class="tooltip">
+        툴팁에 대한 컨텐츠팁에 대한 컨텐츠팁에 대한 컨텐츠팁에 대한 컨텐츠
+      </div>
+    </div>
+  </body>
+</html>

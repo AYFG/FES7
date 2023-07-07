@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <!-- <style>
+      p#id1 {
+        color: black;
+      }
+      div #id1 {
+        color: green;
+      }
+      #id1 {
+        color: blue;
+      }
+
+      .class {
+        color: yellow;
+      }
+      /* !important 사용은 좋지 못하다. 오류나 버그 발생 시 수정을 어렵게 만든다. */
+      * {
+        color: royalblue !important;
+      }
+    </style> -->
+    <!-- CSS도 연결 순위는 후자가 우선순위를 갖는다 -->
+    <link rel="stylesheet" href="./001.css" />
+  </head>
+  <body>
+    <div>
+      <p id="id" class="class">1. 이 글자는 어떤 색일까요?</p>
+      <p id="id" class="class" style="color: red">
+        2. 이 글자는 어떤 색일까요??
+      </p>
+    </div>
+  </body>
+</html>

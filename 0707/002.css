@@ -1,0 +1,30 @@
+p {
+  background: pink;
+}
+
+.max-content {
+  width: max-content;
+}
+
+.min-content {
+  width: min-content;
+}
+
+.fit-content {
+  width: fit-content;
+}
+
+.parent {
+  width: 500px;
+  background: gray;
+}
+
+.parent p {
+  width: 200px;
+  margin: auto;
+}
+
+.parent p {
+  width: 200px;
+  margin: auto 0 auto;
+}
