@@ -12,7 +12,8 @@ p {
   margin: 10px;
   width: 220px;
   height: 441px;
-  border-radius: 10;
+  border-radius: 10px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 .movie-post img {
   width: 180px;
@@ -22,16 +23,45 @@ p {
   padding: 19px 20px 0px 20px;
   box-sizing: content-box;
   vertical-align: top;
+  display: -webkit-box;
+}
+.info {
+  font-size: 13px;
 }
 .movie-name {
-  text-align: center;
+  margin-left: 20px;
   font-size: 16px;
   font-style: normal;
   font-weight: 900;
 }
 .genre {
-    
+  background-color: gold;
+  border: 1px solid orange;
+  /* display: inline-flex; */
+  display: -webkit-box;
+  white-space: nowrap;
 }
-.info {
-    font-size="13"px;
+.score {
+}
+.one,
+.two,
+.three,
+.four {
+  /* border: 1px solid red;s */
+  /* margin: 3px; */
+}
+.one {
+  /* flex: 1px; */
+}
+.open {
+  display: -webkit-box;
+}
+.appearance {
+  display: -webkit-box;
+}
+.btn {
+}
+#gray-font {
+  color: #828282;
+  padding: 10px;
 }
