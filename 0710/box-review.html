@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>박스 만들기 복습</title>
+    <style>
+      p {
+        margin: 0;
+      }
+      .box1 {
+        /* outline , box-shadow , div 하나 더 만들기로 테두리 만들기 */
+        /* box 하나 더 만들기 */
+        background-color: #343f50;
+        width: 100px;
+        height: 32px;
+        border: 5px solid #000;
+        text-align: center;
+        color: #fff;
+        border-top: 5px solid 4a5568;
+
+        overflow: hidden;
+      }
+      .box1 p {
+        border: 5px solid #4a5568;
+        border-width: 5px 0 0 5px;
+        height: 100%;
+        padding: 2px 0;
+      }
+      /* box-shadow */
+      .box2 {
+        width: 108px;
+        height: 44px;
+        border: 5px solid #000;
+        text-align: center;
+        background-color: #343f50;
+        color: white;
+        box-shadow: inset 5px 5px 0 0 #4a5568;
+        padding-top: 7px;
+        /* box-sizing 보더박스를 포함한 사이즈 */
+        box-sizing: border-box;
+      }
+
+      /* 태그 하나로 : outline */
+      .box3 {
+        width: 108px;
+        height: 44px;
+        border: 5px solid #4a5568;
+        text-align: center;
+        background-color: #343f50;
+        color: white;
+        padding-top: 7px;
+        /* box-sizing 보더박스를 포함한 사이즈 */
+        box-sizing: border-box;
+        outline: 5px solid #000;
+      }
+      .btn1 {
+        padding: 10px 20px 8px 24px;
+        background-color: #343f50;
+        color: white;
+        border: 5px solid #000;
+        box-shadow: inset 5px 5px 0 0 #4a5568;
+      }
+      /* .btn1:focus {
+        outline: 5px solid red;
+      } */
+      .box4 {
+        display: inline-block;
+        padding: 10px 20px;
+        background: linear-gradient(90deg, #834df6 0%, #336df2 100%);
+        color: white;
+        border-radius: 50px;
+        border: 5px dashed #e6d6ff;
+        background-clip: padding-box;
+        /* 아웃라인은 포커스 */
+        /* outline: 5px dashed #e6d6ff; */
+      }
+      .box5 {
+        display: inline-block;
+        padding: 10px 20px;
+        border-radius: 0 50px 50px 50px;
+        border: 5px solid #ddd;
+        box-shadow: 5px 5px 5px 0px #eee;
+      }
+      .box6 {
+        border: 5px solid #ddd;
+        box-sizing: border-box;
+        background-color: #336df2;
+        width: 100px;
+        height: 40px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1">
+      <p>Hello🖐</p>
+    </div>
+    <div>
+      <br />
+      <p class="box2">Hello🖐</p>
+    </div>
+    <div>
+      <br />
+      <p class="box3">Hello🖐</p>
+    </div>
+    <br />
+    <button type="button" class="btn1">Hello🖐</button>
+    <button type="button" class="btn1">안녕하세요 하하🖐</button>
+    <br />
+
+    <p class="box4">Hello🖐</p>
+
+    <p class="box5">Hello🖐</p>
+
+    <div class="box6">플렉스 세로정렬</div>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+.main {
+  width: 288px;
+  height: 348px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.3);
+}
+.picture {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  aspect-ratio: 1/1;
+  object-fit: contain;
+  height: 196px;
+  width: 288px;
+}
+.text {
+  height: 152px;
+  margin: 16px 16px 1px 16px;
+}
+.comment-1 {
+  height: 19px;
+  display: flex;
+
+  width: 200px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 16px;
+  font-style: normal;
+}
+.comment-2 {
+  font-weight: lighter;
+  font-size: 12px;
+  line-height: 20px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.comment-3 {
+  font-weight: bold;
+  text-decoration-line: underline;
+  margin-left: 5px;
+}

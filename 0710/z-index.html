@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>z-index</title>
+    <style>
+      .box1,
+      .box2,
+      .box3 {
+        width: 100px;
+        height: 100px;
+      }
+      /* z인덱스는 유지보수를 위해 100 단위로 작업하면 좋다.
+       */
+      .box1 {
+        background-color: royalblue;
+        position: relative;
+        /* z-index를 -1로 두면 parent의 배경 뒤로 넘어가버린다. */
+        /* z-index: -1; */
+        z-index: 100;
+      }
+      .box2 {
+        background-color: slateblue;
+        position: absolute;
+        top: 50px;
+        left: 50px;
+        z-index: 200;
+      }
+      .box3 {
+        background-color: salmon;
+        position: absolute;
+        top: 100px;
+        left: 100px;
+        z-index: 100;
+      }
+      /* 부모의 배경이 왜 a위치에 밖에 차지하지 못할까 */
+      /* b와 c는 원래 위치가 없이 떠있기 때문에 */
+      .parent {
+        background-color: aqua;
+        position: relative;
+        /* 부모가 z 인덱스를 가지는건 자식에게 영향을 끼치지 않는다. */
+        z-index: -1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="box1">a</div>
+      <div class="box2">b</div>
+      <div class="box3">c</div>
+    </div>
+  </body>
+</html>
