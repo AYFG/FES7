@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex</title>
+    <style>
+      .container {
+        height: 300px;
+        display: flex;
+        gap: 20px 40px;
+        /* flex-direction: row-reverse; */
+        /* 교차 축 열로 변경 */
+        /* flex-direction: column; */
+        /* flex-direction: column-reverse; */
+        /* justify-content: space-between; */
+
+        /* 마진 좌우를 주었다 */
+        /* justify-content: space-around; */
+        /* 여백이 다 동일 */
+        justify-content: center;
+        background-color: #ddd;
+        align-items: center;
+
+        /* 2줄 */
+        flex-wrap: wrap;
+        align-content: center;
+      }
+      .item {
+        background-color: skyblue;
+        /* width: 100px; */
+        /* height: 100px; */
+        flex-basis: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item">item A</div>
+      <div class="item">item B</div>
+      <div class="item">item C</div>
+      <div class="item">item D</div>
+      <div class="item">item A</div>
+      <div class="item">item B</div>
+      <div class="item">item C</div>
+      <div class="item">item D</div>
+      <div class="item">item A</div>
+      <div class="item">item B</div>
+      <div class="item">item C</div>
+      <div class="item">item D</div>
+    </div>
+  </body>
+</html>

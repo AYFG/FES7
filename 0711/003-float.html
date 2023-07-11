@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <style>
+    img {
+      /* left,right,none 밖에 없음  */
+      float: left;
+      /* float: right; */
+    }
+    span {
+      background-color: skyblue;
+      margin: 20px;
+      /* span은 inline 요소라 상하마진이 적용되지 않는데
+      float를 쓰면 블록요소로 바뀌어 상하마진이 적용된다 */
+      float: left;
+    }
+    p {
+      clear: both;
+    }
+  </style>
+  <body>
+    <p>
+      <span>안녕하세요</span>
+      <img src="http://placehold.it/200x150" alt="" />
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores dicta
+      officiis dolorum vitae ipsa esse eum, nemo vel voluptatibus possimus ab
+      non ea nobis aliquid vero! Delectus eligendi eveniet aperiam. Cupiditate,
+      aspernatur ex recusandae debitis cumque rerum explicabo earum
+      perspiciatis, blanditiis placeat aut tempora ratione officia.
+      Necessitatibus quidem deleniti est aut eum officia, nihil commodi suscipit
+      earum, exercitationem voluptates eveniet. Numquam, ipsa maxime officiis
+      modi dignissimos cumque sapiente ipsam illum quidem, veritatis qui
+      quibusdam quo recusandae. Aliquam tenetur, ducimus tempore debitis
+      sapiente, a aut odio est tempora asperiores quisquam minima!
+    </p>
+  </body>
+</html>

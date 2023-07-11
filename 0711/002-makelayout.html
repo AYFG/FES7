@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>layout</title>
+    <style>
+      /* 방법 1 너비 값 없을 때 : section에 CSS 적용*/
+      .a1 header {
+        background-color: skyblue;
+        height: 100px;
+      }
+      .a1 section {
+        background-color: darkblue;
+        height: 300px;
+        width: 80%;
+        float: left;
+      }
+      .a1 aside {
+        background-color: limegreen;
+        height: 300px;
+      }
+      .a1 footer {
+        background-color: purple;
+        height: 100px;
+      }
+      /* 방법 2   */
+
+      .a2 header {
+        background-color: skyblue;
+        height: 100px;
+        border: 5px solid red;
+      }
+      .a2 section {
+        background-color: darkblue;
+        height: 300px;
+        width: 80%;
+        float: left;
+        border: 5px solid red;
+      }
+      .a2 aside {
+        background-color: limegreen;
+        height: 300px;
+        width: 20%;
+
+        border: 5px solid red;
+      }
+      .a2 footer {
+        background-color: purple;
+        height: 100px;
+        border: 5px solid red;
+        clear: left;
+      }
+      /* 방법 3 clear fix 사용하기 */
+      .clear-fix::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="a1">
+      <header>header</header>
+      <section>section</section>
+      <aside>aside</aside>
+      <footer>footer</footer>
+    </div>
+    <br />
+
+    <div class="a2">
+      <header>header</header>
+      <section>section</section>
+      <aside>aside</aside>
+      <footer>footer</footer>
+ <br />
+    <div class="a3">
+      <header>header</header>
+      <section>section</section>
+      <aside>aside</aside>
+      <footer>footer</footer>
+
+    </div>
+  </body>
+</html>

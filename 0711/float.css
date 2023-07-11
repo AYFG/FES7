@@ -1,0 +1,55 @@
+[class^="box"] {
+  width: 100px;
+  height: 100px;
+  background: rgba(141, 75, 246, 0.6);
+  color: #fff;
+  line-height: 100px;
+  text-align: center;
+}
+[class^="box"]:first-child {
+  background: rgba(46, 111, 242, 0.6);
+}
+[class^="box"]:last-child {
+  background: salmon;
+}
+.container {
+  background: skyblue;
+}
+
+.box:first-child,
+.box:nth-child(2) {
+  /* float: left; */
+}
+
+.box:last-child {
+  /* clear: left; */
+}
+.box1 {
+  float: left;
+}
+.box2 {
+  float: left;
+}
+.box3 {
+  /* float: left; */
+}
+.layout {
+  overflow: hidden;
+}
+.layout img {
+  border-radius: 50%;
+  float: left;
+  margin-right: 20px;
+}
+.layout h2 {
+  padding-top: 24px;
+}
+.layout::after {
+  /* 인라인 요소 */
+  content: "안녕";
+  display: block;
+  clear: both;
+  width: 50px;
+  height: 50px;
+  background-color: red;
+}

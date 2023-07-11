@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      .wrap {
+        background: #ddd;
+        width: 200px;
+        height: 200px;
+        display: flex;
+        /* 방법 1  */
+        /* flex-direction: row-reverse;
+        align-items: end; */
+        /* 방법 2  */
+        /* justify-content: flex-end;
+        align-items: center; */
+        /* 방법 3 */
+        /* display: flex;
+        align-items: center;
+        justify-content: right; */
+        /* 방법 4 */
+        /* display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: end; */
+        /* 방법 5*/
+        /* display: flex;
+        align-items: center; */
+      }
+      .box {
+        /* 방법 5 */
+        /* margin-left: auto; */
+      }
+      .box {
+        width: 50px;
+        height: 50px;
+        color: #fff;
+        text-align: center;
+        line-height: 50px;
+        font-weight: bold;
+        background: royalblue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="box">A</div>
+    </div>
+  </body>
+</html>
