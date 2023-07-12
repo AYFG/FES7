@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex</title>
+    <style>
+      div {
+        display: flex;
+        align-items: center;
+        background-color: #eee;
+        /* flex-direction: column; */
+      }
+      p {
+        /* 세로정렬 */
+        /* display: inline-block; */
+        background-color: skyblue;
+        height: 100px;
+        flex-basis: 0;
+      }
+      .item1 {
+        flex-grow: 0;
+        order: 10;
+      }
+      .item2 {
+        flex-grow: 1;
+        background-color: aliceblue;
+      }
+      .item3 {
+        flex-grow: 2;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p class="item1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      </p>
+      <p class="item2">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+      </p>
+      <p class="1tem3">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      </p>
+    </div>
+  </body>
+</html>
