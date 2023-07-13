@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>button</title>
+    <style>
+      @font-face {
+        font-family: "Pretendard-Regular";
+        src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+          format("woff");
+        font-weight: 400;
+        font-style: normal;
+      }
+      body {
+        font-family: Pretendard-Regular;
+      }
+      button {
+        width: 88px;
+        height: 32px;
+        background-color: #343f50;
+        color: white;
+        text-decoration: underline;
+        border: 1px solid #1a202c;
+      }
+      .btn2:hover {
+        background-color: gold;
+      }
+      .btn3:active {
+        background-color: red;
+      }
+      .btn4:disabled {
+        color: #4a5568;
+      }
+
+      .default {
+        width: 457px;
+        height: 48px;
+        line-height: 6px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 24px;
+        background-color: #eeeeee;
+      }
+      .hover {
+        width: 457px;
+        height: 48px;
+        line-height: 6px;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        gap: 24px;
+      }
+      .active {
+        width: 457px;
+        height: 48px;
+        line-height: 6px;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        gap: 24px;
+        background-color: #eeeeee;
+      }
+      .disabled {
+        line-height: 6px;
+        display: flex;
+        gap: 24px;
+        justify-content: center;
+      }
+      .blue {
+        background-color: #439aff;
+      }
+      .red {
+        background-color: #eb5757;
+      }
+      .main {
+        width: 457px;
+        height: 48px;
+        display: flex;
+        flex-wrap: wrap;
+        background-color: #eeeeee;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="default">
+        <p>default</p>
+        <button class="btn1">Button</button>
+        <button class="btn1">Yes</button>
+        <button class="btn1">Del</button>
+      </div>
+
+      <div class="hover">
+        <p>hover</p>
+        <button class="btn2">Button</button>
+        <button class="blue btn2">Yes</button>
+        <button class="red btn2">Del</button>
+      </div>
+
+      <div class="active">
+        <p>active</p>
+        <button class="btn3">Button</button>
+        <button class="blue btn3">yes</button>
+        <button class="red btn3">Del</button>
+      </div>
+
+      <div class="disabled">
+        <p>disabled</p>
+        <button class="btn4">Button</button>
+      </div>
+    </div>
+    <!-- 
+    <button>Button</button>
+    <button>Button</button>
+    <button>Button</button>
+    <button>Button</button> -->
+  </body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS 변수</title>
+
+    <style>
+      :root {
+        --main-color: royalblue;
+        --pane-padding: 0.5em 2em;
+        --border-radius: 0.4em;
+      }
+      button {
+        --border-widht: 1px 2px 3px 4px;
+        color: var(--main-color, blue);
+        border-color: var(--main-color, blue);
+        padding: var(--pane-padding);
+        border-width: var(--border-width);
+      }
+      p {
+        color: var(--main-color);
+        border-width: var(--border-widht, 1px 2px);
+      }
+      section{
+        background-color: var(--bg1);
+      }
+      .dark {
+        --bg1: #000;
+        --color1:white;
+      }
+      .light {
+        --bg2: #eee;
+        --color1:black;
+      }
+      .dark section{
+        background-color: var(--bg1);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="light">
+      <section>
+          <button type="button">버튼</button>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa ab ipsam
+            repudiandae perferendis, quasi saepe quam fugit rerum ad reprehenderit
+            tenetur veniam expedita praesentium numquam nemo sunt, quia ratione
+            magni?
+          </p>
+      </section>
+    <div class="dark">
+      <section>
+          <button type="button">버튼</button>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa ab ipsam
+            repudiandae perferendis, quasi saepe quam fugit rerum ad reprehenderit
+            tenetur veniam expedita praesentium numquam nemo sunt, quia ratione
+            magni?
+          </p>
+      </section>
+    </div>
+  </body>
+</html>
