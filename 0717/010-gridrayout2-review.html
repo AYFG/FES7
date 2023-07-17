@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>grid 실습</title>
+    <style>
+      .container :nth-child(1) {
+        background-color: royalblue;
+        grid-area: a;
+      }
+      .container :nth-child(2) {
+        background-color: gold;
+        grid-area: b;
+      }
+      .container :nth-child(3) {
+        background-color: slateblue;
+        grid-area: c;
+      }
+      .container :nth-child(4) {
+        background-color: orange;
+        grid-area: d;
+      }
+      .container :nth-child(5) {
+        background-color: salmon;
+        grid-area: e;
+      }
+      .container :nth-child(6) {
+        background-color: seagreen;
+        grid-area: f;
+      }
+      .container {
+        display: grid;
+        grid-template-areas:
+          "a a b"
+          "c d b"
+          "e f f ";
+        height: 520px;
+        width: 520px;
+        grid-template-columns: 2fr 1fr 2fr;
+        grid-template-rows: 2fr 1fr 2fr;
+        gap: 10px;
+      }
+      .container div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div>a</div>
+      <div>b</div>
+      <div>c</div>
+      <div>d</div>
+      <div>e</div>
+      <div>f</div>
+    </div>
+  </body>
+</html>

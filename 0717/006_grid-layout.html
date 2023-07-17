@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>grid-layout</title>
+    <style>
+      .container {
+        border: 2px solid skyblue;
+        text-align: center;
+        line-height: 50px;
+        width: 200px;
+      }
+      .item.a {
+        background-color: blue;
+        border: 2px solid skyblue;
+        border: 2px solid skyblue;
+      }
+      .item.b {
+        background-color: aquamarine;
+        border: 2px solid skyblue;
+      }
+      .item.c {
+        background-color: yellowgreen;
+        border: 2px solid skyblue;
+      }
+      .item.d {
+        background-color: rebeccapurple;
+        border: 2px solid skyblue;
+      }
+      .cont2 {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        height: 150px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item a">header</div>
+      <div class="cont2">
+        <div class="item b">section>article</div>
+        <div class="item c">aside</div>
+      </div>
+      <div class="item d">footer</div>
+    </div>
+  </body>
+</html>
