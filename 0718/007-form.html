@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+  </head>
+  <body>
+    <form method="get">
+      <label>
+        이름
+        <input id="text" type="text" name="user-name" />
+      </label>
+      <label>
+        비밀번호
+        <input id="text" type="text" name="user-pw" />
+        <input type="file" />
+      </label>
+
+      <label
+        >지역
+        <!-- <input type="text" name="user-pw" value="제주" readonly /> -->
+        <input type="text" name="user-pw" value="제주" disabled />
+      </label>
+      <button id="button" type="submit">전송</button>
+    </form>
+  </body>
+</html>
