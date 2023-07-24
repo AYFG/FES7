@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Abel&family=Noto+Sans+KR:wght@500&display=swap");
+
+h1,
+h2 {
+  margin: 0;
+  font: inherit;
+}
+ul,
+li {
+  list-style: none;
+}
+button {
+  background-color: unset;
+  border: none;
+}
+.section1 {
+  font-family: "Noto Sans KR", sans-serif;
+}
+.logo {
+  display: block;
+  margin: 0 auto;
+  width: 386px;
+  height: 164px;
+}
+.section1-ul {
+  width: 360px;
+  display: grid;
+  grid-template-areas:
+    "a b c"
+    "d e f";
+}
+.section1-ul > li {
+  width: 94px;
+  height: 130px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.5);
+}
+.section1-img {
+  width: 36px;
+  height: 65px;
+  margin: 11px 0 0 23px;
+}
+.section1-flavor {
+  padding: 6px 0 0 7px;
+  font-size: 9px;
+  display: block;
+}
+.price {
+  border-radius: 50px;
+  background: var(--blue, #6327fe);
+  color: #fff;
+  font-size: 12px;
+  width: 70px;
+  height: 22px;
+  text-align: center;
+  font-weight: 500;
+  display: inline;
+  /* vertical-align: top; */
+  margin-top: 7px;
+  padding-top: 2px;
+  margin-left: 6px;
+  box-sizing: border-box;
+}
+.a {
+  display: grid;
+  grid-area: a;
+}
+.b {
+  display: grid;
+  grid-area: b;
+}
+.c {
+  display: grid;
+  grid-area: c;
+}
+.d {
+  display: grid;
+  grid-area: d;
+}
+.e {
+  display: grid;
+  grid-area: e;
+}
+.f {
+  display: grid;
+  grid-area: f;
+}
+.장바구니 {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+}
+.잔액 {
+  width: 200px;
+  height: 33px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #eae8fe;
+  align-items: center;
+  font-size: 14px;
+  padding: 6px 10px 7px 10px;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+.거스름돈 {
+  color: #000;
+  text-align: center;
+  font-family: Noto Sans KR;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  width: 94px;
+  height: 33px;
+  flex-shrink: 0;
+  background: #fff;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}

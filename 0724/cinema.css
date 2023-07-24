@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css2?family=Abel&family=Noto+Sans+KR:wght@500;900 &display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abel&family=Roboto:wght@500;700;900&display=swap");
+body {
+  font-family: "Noto Sans KR";
+}
+body,
+ul,
+li,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+}
+img {
+  vertical-align: top;
+}
+h1,
+h2,
+h3,
+address {
+  font: inherit;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+button {
+  background-color: none;
+  font: inherit;
+  background: none;
+  border: initial;
+}
+button:enabled {
+  cursor: pointer;
+}
+ul,
+li {
+  list-style: none;
+}
+.background {
+  background-color: #f2f2f2;
+  width: 1060px;
+  height: 1170px;
+  margin: 86px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 28px 31px 29px;
+  border: 2px solid #bdbdbd;
+  border-radius: 10px;
+}
+.header {
+  font-family: "Roboto";
+}
+.movie-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 21px;
+  /* margin-bottom: 30px; */
+  font-size: 24px;
+  font-weight: 700;
+  color: #000;
+  box-sizing: border-box;
+}
+.line {
+  left: 205px;
+}
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-bottom: 28px;
+  margin-top: 28px;
+  font-size: 16px;
+  font-weight: 500;
+}
+.btn-gray {
+  color: #828282;
+  font-size: 16px;
+  font-weight: 500;
+}
+.now {
+  font-size: 16px;
+  font-weight: 900;
+}
+.wrapper {
+  width: 970px;
+  height: 962px;
+  background-color: #fff;
+  display: flex;
+  border-radius: 10px;
+  padding: 27px;
+  margin-bottom: 31px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  border: 2px solid #bdbdbd;
+  /* box-sizing: border-box; */
+}
+@media (min-width: 13000px) {
+  .wrapper {
+    display: flex;
+  }
+}
+.cinema-card {
+  width: 220px;
+  border-radius: 10px;
+  border: 1px solid #bdbdbd;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+}
+.cinema-inner {
+  padding: 19px 20px;
+  box-sizing: border-box;
+}
+.cinema-inner img {
+  width: 100%;
+  aspect-ratio: 180/250;
+  object-fit: cover;
+  border: 1px solid #bdbdbd;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+.cinema-title {
+  font-weight: 900;
+  margin: 12px 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.cinema-info {
+  font-size: 13px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 5px;
+}
+.cinema-info .star {
+  background-image: url(./cinema-img/icon-star.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0.3em;
+  background-size: 1em;
+  padding-left: 1.2em;
+}
+.cinema-info .type {
+  color: #828282;
+  margin-right: 5px;
+}
+.btn-group {
+  display: flex;
+}
+.btn-go,
+.btn-view {
+  background-color: #f2f2f2;
+  width: 100%;
+  font-size: 14px;
+  height: 41px;
+  border-top: 1px solid #bdbdbd;
+  padding-bottom: 2px;
+  box-sizing: border-box;
+}
+.btn-go {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 0 0 10px;
+  border-right: 1px solid #bdbdbd;
+}
+.btn-go:focus-visible {
+  z-index: 1;
+}
+.btn-view {
+  border-radius: 0 0 10px 0;
+  /* background-image: url(./cinema-img/icon-play.svg);
+  background-repeat: no-repeat;
+  background-position: 1.2em 0.9em;
+ */
+}
+.btn-view::before {
+  display: inline-block;
+  content: "";
+  width: 1em;
+  height: 1em;
+  background-image: url(./cinema-img/icon-play.svg);
+  background-repeat: no-repeat;
+  background-size: contanin;
+  vertical-align: middle;
+  /* margin-right: 2px;
+  margin-left: -0.4em; */
+  /* background-color: skyblue; */
+  margin: -2px 2px 0 -0.4em;
+}
+.footer {
+  width: 1920px;
+  height: 213px;
+  font-family: "Roboto";
+  font-size: 22px;
+  background-color: #f2f2f2;
+  position: relative;
+  display: flex;
+}
+.company {
+  display: flex;
+  position: absolute;
+  width: 1189px;
+  top: 53px;
+  left: 366px;
+  padding-bottom: 42px;
+  border-bottom: 1px solid #c4c4c4;
+  background-image: url(./cinema-img/icon-twitter.svg);
+  /* background-image: url(./cinema-img/icon-instagram.svg);
+  background-image: url(./cinema-img/icon-facebook.svg); */
+  background-repeat: no-repeat;
+  /* background-position: right 10px; */
+  /* background-position: right 15px; */
+  background-position: right 20px;
+  vertical-align: middle;
+}
+address {
+  font-size: 14px;
+  font-family: "Noto Sans KR";
+  position: absolute;
+  bottom: 38px;
+  left: 365px;
+}
+.footer-strong {
+  font-weight: 700;
+}
