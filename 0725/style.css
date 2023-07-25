@@ -1,0 +1,216 @@
+h2,
+p,
+strong {
+  margin: inherit;
+  font-size: inherit;
+}
+button {
+  background: none;
+  border: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+input {
+  border: none;
+}
+@font-face {
+  font-family: "SpoqaHanSansNeo-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SpoqaHanSansNeo-Regular.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.wrapper {
+  font-family: "SpoqaHanSansNeo-Regular";
+  width: 520px;
+  height: 736px;
+  /* background-color: #767676; */
+  margin: 0 auto;
+  border: 2px solid royalblue;
+}
+.header {
+  text-align: center;
+  background-image: url(./images/close.png);
+  background-repeat: no-repeat;
+  background-position: 480px;
+  background-size: 16px;
+  padding-top: 20px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #c4c4c4;
+}
+.welcome {
+  width: 369px;
+  height: 24px;
+  font-size: 20px;
+  line-height: 24px;
+  margin: 24px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+.input-idpw {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.input {
+  width: 472px;
+  height: 50px;
+  margin-left: 24px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: "SpoqaHanSansNeo-Regular";
+}
+.-id {
+  border: 2px solid #f4492e;
+  padding-left: 16px;
+  box-sizing: border-box;
+  font-weight: 400;
+}
+.-pw {
+  padding-left: 16px;
+  border: 1px solid #c4c4c4;
+  box-sizing: border-box;
+  font-weight: 500;
+}
+.strong {
+  color: #f4492e;
+  font-size: 14px;
+  font-weight: 400;
+  margin-left: 28px;
+}
+.labl-hold {
+  padding-top: 5px;
+  padding-bottom: 14px;
+  padding-left: 28px;
+}
+.txt-hide {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+.labl-hold {
+  position: relative;
+}
+.labl-hold::before {
+  display: inline-block;
+  content: "";
+  width: 22px;
+  height: 22px;
+  margin-right: 10px;
+  border: 1px solid black;
+  vertical-align: -5px;
+}
+
+.inp-Hold:focus-visible + .labl-hold::before {
+  outline: 2px solid teal;
+  outline-offset: 3px;
+}
+.labl-hold::after {
+  /* 디스플레이가 아닌 포지션을 준다 */
+  /* display: inline-block; */
+  /* position을 주면 display:block으로 변경된다 */
+  position: absolute;
+  top: -3px;
+  left: 20px;
+  content: "";
+  width: 22px;
+  height: 22px;
+  /* background-image: url(./images/checkmark.png);
+        background-size: 22px;
+        background-repeat: no-repeat; */
+  background: url(./images/checkmark.png) 0 0/22px no-repeat;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.inp-Hold:checked + .labl-hold::after {
+  left: 1px;
+  opacity: 1;
+}
+
+.btn-login {
+  width: 472px;
+  background-color: #2f80ed;
+  color: #ffffff;
+  height: 50px;
+  font-size: 18px;
+  font-weight: 700;
+  margin-left: 24px;
+  font-family: "SpoqaHanSansNeo-Regular";
+  border-radius: 5px;
+  cursor: pointer;
+}
+.Atag {
+  display: flex;
+  /* background-color: #00bf18; */
+  color: #767676;
+  /* align-items: center;
+  justify-content: center; */
+  margin: 10px auto;
+  gap: 10px;
+}
+.line {
+  /* display: inline; */
+  text-align: center;
+  margin-bottom: 0px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #767676;
+}
+/* footer */
+
+.another-login {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: #767676;
+  width: 472px;
+  height: 50px;
+  text-align: center;
+  margin-left: 24px;
+  font-family: "SpoqaHanSansNeo-Regular";
+  font-weight: 500;
+}
+.icon-google {
+  cursor: pointer;
+  padding: 15px;
+  background-repeat: no-repeat;
+  border: 1px solid #767676;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background-image: url(./images/Google__G__Logo\ 1.png);
+  background-position: 12px;
+}
+.icon-facebook {
+  cursor: pointer;
+  padding: 15px;
+  background-repeat: no-repeat;
+  border: 1px solid #2d9cdb;
+  border-radius: 5px;
+  background-image: url(./images/facebook.png);
+  background-position: 12px;
+}
+.icon-naver {
+  cursor: pointer;
+  padding: 15px;
+  background-repeat: no-repeat;
+  border: 1px solid #00bf18;
+  border-radius: 5px;
+  background-position: 12px;
+  background-image: url(./images/naver-logo.png);
+}
+.icon-kakao {
+  cursor: pointer;
+  padding: 15px;
+  background-repeat: no-repeat;
+  background-position: 12px;
+  border: 1px solid #f2c94c;
+  border-radius: 5px;
+  background-image: url(./images/message-circle.png);
+}

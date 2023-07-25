@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>clip-rect/clip-path</title>
+    <style>
+      img {
+        /* 앱솔루트 포지션에서만 동작 */
+        position: absolute;
+        /* clip: rect(0, 100px, 100px, 0); */
+        clip-path: inset(100px 100px 0 0);
+      }
+    </style>
+  </head>
+  <body>
+    <img src="/0724/cinema-img/poster-img1.jpg" alt="" />
+  </body>
+</html>
