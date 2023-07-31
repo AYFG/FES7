@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>반응형 video</title>
+    <style>
+      .nextlevel {
+        /* width: 100%; */
+        /* max-width: 100%; */
+        /* 뷰포트 기준 포지션 /top,left */
+        position: fixed;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        /* height: 100vh; */
+        min-height: 100%;
+        opacity: 0.2;
+        pointer-events: none;
+      }
+      .article-spicy {
+        position: relative;
+        /* 56.25% 의 핵심 padding-top,bottom은 부모 요소의 너비에 비례한다 or 부모의 높이값을 지정해준다 */
+        /* 다만 부모의 높이값을 지정해버리면 그 위의 부모 그 위의 부모 계속 지정하는 일이 발생할 수도 있다 */
+        /* 부모의 너비가 1200px이라면 자식요ㅗ소의 padding-top=50%의 값은 600px과 같다 */
+        padding-top: 56.25%;
+        /* or 종횡비를 입력해준다. 9/16*100 == 56.25% */
+        /* aspect-ratio: 16/9; */
+        /* or viewport기준 width 56.25 */
+        /* height: 56.25vw; */
+      }
+      .spicy {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- video tag - next level / iframe - spicy -->
+    <!-- <video
+      class="nextlevel"
+      autoplay
+      controls
+      loop
+      muted
+     src="./nextlevel.mp4"
+    </video> -->
+    <article class="article-spicy">
+      <iframe
+        class="spicy"
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/Os_heh8vPfs"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; muted; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+    </article>
+  </body>
+</html>

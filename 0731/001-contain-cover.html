@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이미지 최적화,반응형 이미지</title>
+    <style>
+      img {
+        width: 100%;
+        /* 이미지가 커지는데 깨지면 안되면 max-width */
+        /* max-width: 100%; */
+      }
+      article {
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+      }
+      article {
+        /* background-image: url("https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y2l0eXxlbnwwfHwwfHw%3D&w=1000&q=80"); */
+        /* background-repeat: no-repeat; */
+        /* width: 100% = cover */
+        /* background-size: cover; */
+        /* max-width = contain */
+        /* background-size: contain; */
+        /* contain이 필요한 경우 - 로고나 잘리면 안되는 이미지를 표현 할 때 */
+        /* background-position: center; */
+        background: url("https://cdn.discordapp.com/attachments/1122761439770329108/1135431425148067972/logo_google.jpeg")
+          center/contain no-repeat;
+        background-color: #000;
+      }
+    </style>
+  </head>
+  <body>
+    <article>
+      <!-- <img src="./열쇠고리.jpg" alt="" /> -->
+    </article>
+  </body>
+</html>
