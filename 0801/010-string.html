@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>string</title>
+  </head>
+  <body>
+    <script>
+      //문자열은 작은 따옴표 큰따옴표 빽틱 으로 둘러싼 일련의 문자
+      let s = "hello \nworld";
+      console.log(s);
+      // let s = `hello
+      //         world`;
+
+      let age = 10;
+      console.log(`홍길동의 나이는 ${age}살 입니다`);
+      console.log(`홍길동의 나이는 ${2 * age}살 입니다`);
+      console.log("홍길동의 나이는 " + age + "살 입니다.");
+
+      //순서 출력
+      let name = "홍길동";
+      console.log(name[0]);
+      console.log(name[1]);
+      console.log(name[2]);
+      console.log(name[100]);
+      console.log(name[-1]); //다른 언어는 마지막 문자를 출력
+      // js는 문자열의 순서를 넘어갔을 때 에러가 아닌 undefined를 출력함
+
+      // 문자열의 사칙연산
+      console.log("1" + 2 + 3); //다른 언어에서는 error
+      console.log(2 + 3 + "1"); //다른 언어에서는 error
+      console.log(2 + 3 + +"1"); //다른 언어에서는 error
+      console.log("b" + "a" + +"a" + "a"); //+ 'a'
+      console.log("1" - "1");
+      console.log("lee" + "hojun");
+      console.log("hojun" * 3); //다른 언어는 'hojunhojunhojun'
+
+      //형변환
+      console.log("1" + "1"); //11이 아니라 2가 출력되게 할 수 있을까?
+      console.log(+"1" + +"1"); //11이 아니라 2가 출력되게 할 수 있을까? 권하지않음
+      console.log(Number("1") + Number("1")); //11이 아니라 2가 출력되게 할 수 있을까? 권하지않음
+      console.log(parseInt("1") + parseInt("1"));
+      console.log(parseInt(undefined));
+      console.log(1 + 1); //2가 아닌 11이 출력되게 할 수 있을까요?
+      console.log(String(1) + String(1)); // 권하지않음
+      // console.log(1.toString() + 1.toString()); // error
+      let x = 10;
+      console.log(x.toString() + x.toString()); //가능한 코드
+      console.log((1).toString() + (1).toString()); //가능한 코드
+    </script>
+  </body>
+</html>
