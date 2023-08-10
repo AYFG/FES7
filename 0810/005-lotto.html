@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>로또 번호 만들기</title>
+  </head>
+  <body>
+    <script>
+      // 로또 번호 만들기
+      // 배열에 6개의 숫자 / 1~45 / 중복 없이
+      //   나:
+      //   let arr = [];
+      //   while (arr.length < 6) {
+      //     let num = Math.floor(Math.random() * 45 + 1);
+      //     if (arr.indexOf(num) == -1) {
+      //       arr.push(num);
+      //     }
+      //   }
+      //   document.write(arr.sort((a, b) => a - b));
+      //   ///////////////////////////////////////////////////
+      //   function lottoGenerator() {
+      //     const lottoArr = [];
+      //     while (lottoArr.length < 6) {
+      //       // 1~ 44.99999999
+      //       const result = parseInt(Math.random() * 45 + 1);
+
+      //       if (!lottoArr.includes(result)) {
+      //         lottoArr.push(result);
+      //       }
+      //     }
+      //     return lottoArr;
+      //   }
+      //   console.log(lottoGenerator());
+      //안보고 복습
+      let lotto = [];
+      while (lotto.length < 6) {
+        let arr = Math.floor(Math.random() * 45 + 1);
+        if (!lotto.includes(arr)) {
+          lotto.push(arr);
+        }
+      }
+      document.write(lotto);
+    </script>
+  </body>
+</html>
