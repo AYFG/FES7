@@ -42,3 +42,29 @@ let dif = [...a].filter((x) => !b.has(x));
 const differ = [...a].filter((value) => {
   return !b.has(value);
 });
+
+// function lottoGenerator() {
+//           const lottoArr = [];
+//           while (lottoArr.length < 6) {
+//             // 1~ 44.99999999
+//             const result = parseInt(Math.random() * 45 + 1);
+
+//             if (!lottoArr.includes(result)) {
+//               lottoArr.push(result);
+//             }
+//           }
+//           return lottoArr;
+//         }
+//         console.log(lottoGenerator());
+function lottoGenerator() {
+  const lottoSet = new Set();
+
+  while (lottoSet.size < 6) {
+    const result = parseInt(Math.random() * 45 + 1);
+    lottoSet.add(result);
+  }
+  return lottoSet;
+}
+console.log(lottoGenerator());
+
+// 배열이나 객체를 먼저 만들어보고 Map과 set으로 수정을 해보자

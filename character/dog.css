@@ -1,0 +1,314 @@
+body {
+  background-color: pink;
+}
+@keyframes licatMoving {
+  0% {
+    transform: translate(0%) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translate(0%) rotate(0deg) scale(1);
+  }
+  50% {
+    transform: translate(0%) rotate(-10deg) scale(1);
+  }
+  80% {
+    transform: translate(0%) rotate(10deg) scale(1);
+  }
+  to {
+    transform: translate(0%) rotate(-20deg) scale(1.2);
+  }
+}
+
+@keyframes earLeftMoving {
+  30% {
+    transform: rotate(-20deg);
+  }
+  to {
+    transform: rotate(-25deg);
+  }
+}
+
+@keyframes earRightMoving {
+  30% {
+    transform: rotate(20deg);
+  }
+  to {
+    transform: rotate(25deg);
+  }
+}
+
+@keyframes mouthMoving {
+  0% {
+    height: 30px;
+  }
+  35% {
+    height: 36px;
+  }
+  70% {
+    height: 30px;
+  }
+  to {
+    height: 60px;
+  }
+}
+
+.dog {
+  position: relative;
+  width: 600px;
+  height: 600px;
+  margin: 0 auto;
+  animation: licatMoving 2s infinite alternate;
+}
+.face {
+  background-color: orange;
+  width: 300px;
+  height: 305px;
+  border-radius: 80% 80% 70% 70%;
+  top: 25%;
+  right: 25%;
+  border: 10px solid black;
+  position: absolute;
+  z-index: 200;
+}
+.face .eyebrow {
+  background-color: black;
+  width: 70px;
+  height: 25px;
+  border-radius: 90% 90% 60% 50%;
+}
+.face .eye {
+  background-color: black;
+  width: 38px;
+  height: 50px;
+  border-radius: 100%;
+  z-index: 100;
+}
+.eye.left-light {
+  position: absolute;
+  background-color: white;
+  width: 16px;
+  height: 30px;
+  top: 40%;
+  left: 21%;
+  border: 2px solid gainsboro;
+  z-index: 110;
+}
+.eye.right-light {
+  position: absolute;
+  background-color: white;
+  width: 16px;
+  height: 30px;
+  top: 40%;
+  right: 31%;
+  border: 2px solid gainsboro;
+}
+.eye.left-light2 {
+  position: absolute;
+  background-color: white;
+  width: 5px;
+  height: 10px;
+  top: 50%;
+  left: 27%;
+  border: 2px solid gainsboro;
+}
+.eye.right-light2 {
+  position: absolute;
+  background-color: white;
+  width: 5px;
+  height: 10px;
+  top: 50%;
+  right: 29%;
+  border: 2px solid gainsboro;
+}
+.face .nose .black {
+  background-color: black;
+  width: 60px;
+  height: 35px;
+  border-radius: 40%;
+  position: absolute;
+  top: 180px;
+  right: 44%;
+  z-index: 200;
+}
+
+.face .eyebrow.left {
+  position: absolute;
+  top: 70px;
+  right: 59%;
+  transform: rotate(15deg);
+}
+.eyebrow.right {
+  position: absolute;
+  top: 68px;
+  right: 20%;
+  transform: rotate(-15deg);
+}
+.eye.left {
+  position: absolute;
+  top: 120px;
+  right: 68%;
+}
+.eye.right {
+  position: absolute;
+  top: 120px;
+  right: 26%;
+}
+
+.scarface {
+  position: absolute;
+  width: 27px;
+  height: 4px;
+  background-color: green;
+  top: 36%;
+  right: 19%;
+  transform: rotate(39deg);
+  border-radius: 100%;
+}
+.point {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background-color: black;
+  bottom: 5%;
+  right: 70%;
+  z-index: 100;
+  border-radius: 100%;
+}
+
+.mouth .left {
+  position: absolute;
+  top: 189px;
+  right: 51%;
+  transform: rotate(165deg);
+  z-index: 200;
+}
+.mouth .right {
+  position: absolute;
+  top: 112px;
+  left: 9%;
+  transform: rotate(229deg);
+  z-index: 200;
+}
+.thung {
+  background-color: #f08080;
+  width: 24px;
+  height: 19px;
+  border-radius: 0% 0% 40% 40%;
+  position: absolute;
+  top: 238px;
+  right: 46%;
+  z-index: 100;
+  border: 8px solid black;
+  animation: mouthMoving 2s ease infinite alternate;
+}
+.thung-line {
+  position: absolute;
+  width: 5px;
+  height: 25px;
+  background-color: black;
+  top: 245px;
+  right: 52%;
+  z-index: 200;
+  animation: mouthMoving 2s ease infinite alternate;
+}
+.ear {
+  width: 150px;
+  height: 150px;
+  display: inline-block;
+  position: absolute;
+  top: 120px;
+  background-color: orange;
+  position: absolute;
+  border: 10px solid black;
+}
+.ear.left {
+  right: 53%;
+  border-radius: 160px 400px 0px 140px;
+  animation: earLeftMoving 0.3s infinite alternate;
+}
+.ear.right {
+  right: 20%;
+  border-radius: 400px 100px 140px 0px;
+  animation: earRightMoving 0.3s infinite alternate;
+}
+.scarf {
+  position: absolute;
+  bottom: 12%;
+  left: 32%;
+  width: 270px;
+  height: 140px;
+  background-color: red;
+  transform: rotate(-26deg);
+  border: 8px solid black;
+  border-radius: 20% 30% 100% 0%;
+}
+.triangle {
+  position: absolute;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 15px solid white;
+  bottom: 14%;
+  left: 46%;
+}
+.triangle.deg {
+  position: absolute;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 15px solid white;
+  bottom: 13%;
+  left: 46%;
+  transform: rotate(180deg);
+}
+.white-mouse {
+  position: absolute;
+  width: 290px;
+  height: 148px;
+  background-color: white;
+  top: 167px;
+  right: 0%;
+  border: 5px solid black;
+  border-radius: 70%;
+
+  /* z-index: 00; */
+}
+.ear.white-left {
+  background-color: #dcdcdc;
+  width: 41px;
+  height: 50px;
+  top: 27%;
+  left: 23%;
+  border-radius: 50%;
+}
+.ear.white-right {
+  background-color: #dcdcdc;
+  top: 27%;
+  right: 26%;
+  width: 41px;
+  height: 50px;
+  border-radius: 50%;
+}
+.cheek {
+  position: absolute;
+  width: 20px;
+  height: 1px;
+  background-color: red;
+  border-radius: 100%;
+  transform: rotate(-41deg);
+}
+
+.cheek.left {
+  bottom: 20%;
+  left: 13%;
+}
+.cheek.left2 {
+  bottom: 20%;
+  left: 19%;
+}
+.cheek.right {
+  bottom: 20%;
+  right: 25%;
+}
+.cheek.right2 {
+  bottom: 20%;
+  right: 19%;
+}

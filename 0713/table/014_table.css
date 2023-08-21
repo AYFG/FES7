@@ -1,0 +1,28 @@
+table {
+  /* 보더 겹치게 하기 */
+  border-collapse: collapse;
+  text-align: center;
+  width: 1100px;
+}
+th,
+td {
+  border: 3px solid black;
+  padding: 5px;
+}
+
+caption {
+  caption-side: bottom;
+  margin: 25px 0 0 0;
+}
+.col1 {
+  background-color: bisque;
+}
+th {
+  background-color: bisque;
+}
+.row1 {
+  height: 50px;
+}
+tfoot {
+  font-weight: bold;
+}

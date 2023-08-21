@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+<!-- 배운 문법을 바탕으로 HTML 요소들 중 첫번째 item-second 와 첫번째 li 를 콘솔로 출력해보세요 🙂 (querySelector 사용 X) -->
+    점심 식단
+    <article id="container">
+        <ul>
+            <li>탕수육</li>
+            <li class="item-second">유산슬</li>
+            <li>짜장면<button>버튼</button></li>
+        
+        </ul>
+    </article>
+    저녁 식단
+    <article>
+        <ul>
+            <li>된장국</li>
+            <li class="item-second">김치찌게</li>
+            <li>해장국</li>
+        </ul>
+<script>
+    const btn = document.querySelector("button")
+    btn.addEventListener("click",function(){
+        console.log("clicked!!")
+        btn.classList.add("blue")
+    })
+
+
+    const lis = document.getElementsByTagName("li"); // HTMLCollection 즉시반영
+    const lis2 = document.querySelectorAll('li') // NodeList 정적
+
+    const container = document.querySelector("#container ul")
+    
+    container.append(document.createElement("li"))  
+    
+    console.log(lis)
+    console.log(lis2)
+    // const lis2 = document.getElementsByClassName("item-second"); //lis2[0]
+
+    // const container = document.getElementById("container");
+    // const innerLis = container.getElementsByTagName("li") //바로 도큐먼트 타지말고 범위를 좁혀가며 탐색하는 것을 추천
+
+    // const firstLi = document.querySelector("#container");
+    // const firstLi = document.querySelector(".item-second");
+    // const secondLi = document.querySelectorAll(".item-second");//secondLi[1]
+    
+</script>
+</body>
+</body>
+</html>

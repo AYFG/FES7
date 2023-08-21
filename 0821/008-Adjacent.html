@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>더 인접한곳(Adjacent)으로 정밀하게 배치하기</title>
+  </head>
+  <body>
+    <strong class="sayHi"> 반갑습니다. </strong>
+    <!--  -->
+    <script>
+      const sayHi = document.querySelector(".sayHi");
+      sayHi.insertAdjacentHTML("beforebegin", "<span>안녕하세요</span>"); //여는 스트롱 태그 앞 / html태그 가능
+      sayHi.insertAdjacentHTML("afterbegin", "안녕히 가세요!");
+      sayHi.insertAdjacentHTML("beforeend", "<span>안녕히가세요</span>");
+      sayHi.insertAdjacentHTML("afterend", "<span>안녕히가요</span>"); //
+    </script>
+  </body>
+</html>

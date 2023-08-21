@@ -1,0 +1,11 @@
+@font-face {
+  font-family: "SpoqaHanSansNeo-400";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SpoqaHanSansNeo-Regular.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+.wrapper {
+  border: 1px solid red;
+  font-family: "SpoqaHanSansNeo-400";
+}

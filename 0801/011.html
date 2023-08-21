@@ -16,8 +16,8 @@
       console.log(s.indexOf("c"));
       console.log(s.search("c"));
       //존재하지 않는 값을 찾았을 때
-      console.log(s.indexOf("z"));
-      console.log(s.search("z"));
+      console.log(s.indexOf("z")); // -1
+      console.log(s.search("z")); // -1
       //정규표현식을 넣었을 때 indexof는 정규표현식을 허용하지 않는다
       console.log(s.indexOf(/cd/g));
       console.log(s.search(/cd/g));
