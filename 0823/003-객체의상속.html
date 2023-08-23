@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <script>
+      const obj = {
+        name: "test",
+      };
+      // hasOwnProperty : boolean값을 반환
+      //
+      console.log(obj.hasOwnProperty("name"));
+      // true
+
+      const arr = [1, 2, 3];
+
+      console.log(arr.hasOwnProperty("name"));
+      // false
+      //   배열에게는 hasOwnProperty 가 없는데 프로토타입체이닝을 통해 객체의 프토로타입을 상속받아 hasOwnProperty를 받을 수 있다.
+
+      // 배열 arr의 __proto__ 가 Array?함수?의 __proto__를 참조하고, Array함수의 __proto__ 가 Object 함수의 __proto__ 를 참조하고 있기 때문에 Array의 prototype에 존재하지 않는 Object 객체의 프로퍼티와 메서드를 사용할 수 있습니다. 이처럼 자기 자신에게 존재하지 않는 프로퍼티나 메서드를 프로토타입을 통해 추적하는 과정을 "프로토타입 체이닝"이라고 합니다.
+      //   array?함수? 함수는 객체 /function은 object /무언가의 인스턴스
+      //  function = new function
+
+      // arr 가 hasOwnProperty를 사용할수 있는것은 prototype 을 통해서 상속 받았기 때문!!
+      console.log(Array.prototype.__proto__ === Object.prototype);
+      console.log(Number.prototype.__proto__ === Object.prototype);
+      console.log(String.prototype.__proto__ === Object.prototype);
+      console.log(Math.__proto__ === Object.prototype);
+      //   객체가 최상위
+
+      // autoboxing - 원시타입도 메서드를 쓸 수 있게 한다. 원시타입은 그저 값 상속 불가
+    </script>
+  </body>
+</html>

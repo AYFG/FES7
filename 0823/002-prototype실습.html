@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <script>
+      //실습2: 우리가 객체지향 개념에서 만들었던 ‘나’ 와 ‘대상’ 객체를 생성자를 통해서 만들어 볼 수 있도록 코드를 수정해봅시다.
+      //         const jaewoong = {
+      //   name: "jaeWoong",
+      //   heroName: "fireMan",
+      //   attack: function (monster) {
+      //     monster.dead();
+      //   },
+      // };
+      // const monster = {
+      //   dead: function () {
+      //     console.log("꿱");
+      //   },
+      // };
+      // jaeWoong.attack(monster);
+
+      ///////////////////////////
+      //   function Hero(name) {
+      //     this.name = name;
+      //   }
+      //   Hero.prototype.sayMyName = function () {
+      //     console.log(`도와줘요 ${this.name}!!`);
+      //   };
+      //   const me = new Hero("fireMan");
+      //const monster = {
+      //   dead: function () {
+      //     console.log("꿱");
+      //   },
+      // };
+      ////////////////////////////////////////
+      //       const me = {
+      //     name : '한재현',
+      //     address : '제주도 제주시 인다 1길',
+      //     phoneNum : '010-8000-0000',
+      //     canWalk : function(){
+      //         console.log('재현이가 걷는다.');
+      //     },
+      //     teaching : function(student){
+      //         student.levelUp();
+      //     }
+      // }
+      // const lion = {
+      //     level: 1,
+      //     levelUp : function(){
+      //         this.level++;
+      //     }
+      // }
+      // me.teaching(lion);
+      ////////////////////////////////////////////////////////////
+      function Me() {
+        this.name = "한재현";
+        this.address = "제주도 제주시 인다 1길";
+        this.phoneNum = "010-8000-0000";
+      }
+      Me.prototype.canWalk = function () {
+        console.log("재현이가 걷는다.");
+      };
+      Me.prototype.teaching = function (student) {
+        student.levelUp();
+      };
+      function Lion() {
+        this.level = 1;
+      }
+      Lion.prototype.levelUp = function () {
+        this.level++;
+      };
+      const me1 = new Me();
+      const lion1 = new Lion();
+      //   프로토타입에 등록이 되면 생성자 함수에게 상속 받을 수 있다 , 같은 값을 참조하게 한다.
+    </script>
+  </body>
+</html>

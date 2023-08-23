@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <script>
+      //   class Robot {
+      //     //클래스의 생성자 함수
+      //     constructor(name) {
+      //       this.myName = name;
+      //     }
+      //     sayYouName() {
+      //       console.log(`제 이름은 ${this.myName} 입니다`);
+      //     }
+      //   }
+      //   const robot = new Robot("재웅");
+      //   robot.sayYouName(); //제 이름은 재웅 입니다
+      //   이처럼 내부적인 동작은 동일하지만 더 보기 좋고 편리하게 개선된 문법을 슈가신텍스 (Syntactic sugar) 라고 부릅니다. (classes 문법은 단순한 설탕문법은 아닙니다. 여러가지 추가된 문법이 있습니다.)
+      ///////////////////////////////////////////////////////
+
+      //   실습 : 우리가 위에서 만들어본 여러분 자신의 생성자 함수를 class 문법으로 변경해봅시다.
+      class Man {
+        constructor(name) {
+          this.myName = name;
+        }
+        sayName() {
+          console.log(`제 이름은 ${this.myName} 입니다.`);
+        }
+      }
+      const me = new Man("Woong");
+      ///////////////////////////////////////////////////////
+      //   function Me() {
+      //     this.name = "한재현";
+      //     this.address = "제주도 제주시 인다 1길";
+      //     this.phoneNum = "010-8000-0000";
+      //   }
+      //   Me.prototype.canWalk = function () {
+      //     console.log("재현이가 걷는다.");
+      //   };
+      //   Me.prototype.teaching = function (student) {
+      //     student.levelUp();
+      //   };
+      //   function Lion() {
+      //     this.level = 1;
+      //   }
+      //   Lion.prototype.levelUp = function () {
+      //     this.level++;
+      //   };
+      //   const me1 = new Me();
+      //   const lion1 = new Lion();
+      // class로 문법 변경
+      class Me {
+        constructor(myAddress) {
+          this.name = "재현";
+          this.address = myAddress;
+          this.phoneNum = "010-8000-0000";
+        }
+
+        canWalk() {
+          console.log("재현이가 걷는다.");
+        }
+
+        teaching(student) {
+          student.levelUp();
+        }
+      }
+
+      class Lion {
+        constructor() {
+          this.level = 1;
+        }
+
+        levelUp() {
+          this.level++;
+        }
+      }
+      const me2 = new Me();
+      const lion = new Lion();
+      me2.teaching(lion);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>비공개 프로퍼티</title>
+  </head>
+  <body>
+    <script>
+      // 클래스의 클로저 => 비공개프로퍼티 ( #키워드)
+      class Robot {
+        #important; //비공개 프로퍼티
+        constructor(name, info) {
+          this.name = name;
+          this.#important = info; //사용할때도 #
+        }
+
+        sayYourName() {
+          console.log(`삐리비리. 제 이름은 ${this.name}입니다. 주인님.`);
+        }
+      }
+
+      const bot = new Robot("smith", 123123123);
+
+      bot.name; // smith
+      //   console.log(bot.#important);//Uncaught SyntaxError: Private field '#important' must be declared in an enclosing class //접근 불가
+      //   bot.#important = 0000; // 같은 오류로 할당 불가
+
+      ///////////////////////////////////////////////////
+
+      // private 프로퍼티 접근 , 수정
+
+      class Robot2 {
+        #password;
+
+        constructor(name, pw) {
+          this.name = name;
+          this.#password = pw;
+        }
+
+        sayYourName() {
+          console.log(`삐리비리. 제 이름은 ${this.name}입니다. 주인님.`);
+        }
+        //getter , setter 로 값 제어하기
+        getPassword() {
+          return this.#password;
+        }
+
+        setPassword(pw) {
+          this.#password = pw;
+        }
+      }
+      const robot2 = new Robot2("재웅", 123123);
+      console.log(robot2.getPassword());
+      console.log(robot2.setPassword(456456));
+      //////////////////////////////////////////////
+      class Robot3 {
+        #password;
+
+        constructor(name, pw) {
+          this.name = name;
+          this.#password = pw;
+        }
+
+        sayYourName() {
+          console.log(`삐리비리. 제 이름은 ${this.name}입니다. 주인님.`);
+        }
+        // 편리하지만 주의사항이 있음
+        get password() {
+          return this.#password;
+        }
+
+        set password(pw) {
+          this.#password = pw;
+        }
+      }
+
+      const robot3 = new Robot3("재현", 1234);
+      console.log(robot3.password);
+      //   get 과 set을 사용할 때 주의할 점!
+      // get과 set을 사용하면 마치 객체의 프로퍼티를 수정하는것 같은 간편함을 느낄 수 있습니다. 하지만 해당 코드를 직접 ★"작성하지 않은 협업자들"★에게는 오해를 불러일으킬 소지가 있습니다. get, set 안에 어떤 로직이 들어있는지 파악하지 못하고 단순히 객체의 프로퍼티를 수정한다는 착각을 일으킬 수 있기 때문입니다.
+      // 때문에 ★협업 시에는 주석이나, 가이드 문서를 만들어 충분한 정보를 제공해주는것이 좋습니다.★
+      // 또한 private 필드 선언을 한 프로퍼티의 경우 get, set 키워드를 사용하면, ★"비공개 하였음에도 불구하고 일반 프로퍼티처럼 접근이 가능"★하게됩니다.
+    </script>
+  </body>
+</html>

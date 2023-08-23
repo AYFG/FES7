@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <script>
+      function Parent() {
+        //생성자 함수도 함수다.
+        this.name = "재현";
+      }
+      Parent.prototype.rename = function (name) {
+        this.name = name;
+      };
+      Parent.prototype.sayName = function () {
+        console.log(this.name);
+      };
+      function Child() {
+        //call 메소드를 통해 parent의 프로퍼티를 상속받을 수 있다.
+        Parent.call(this); //함수를 실행시킨다
+      } //Child의 아무 프로퍼티를 만들지 않았지만 Child가 가져다 쓸 수 있게 call
+
+      //   Objcet.create 메소드를 통해 프로토타입을 연결했다.
+      Child.prototype = Object.create(Parent.prototype);
+
+      //  상속받는 자식만의 메소드나 프로퍼티를 만드는 것도 가능하다.
+      Child.prototype.hello = function () {
+        console.log("hello");
+      };
+      Child.prototype.canWalk = function () {
+        console.log("now i can walk!!");
+      };
+      const child1 = new Child();
+      console.log(child1.name);
+      console.log(child1.hello());
+      console.log(child1.canWalk());
+      console.log(child1.sayName());
+      //   prototype 코드의 단점
+      //      1. 객체 안에 존재하던 메소드가 prototype 이라는 키워드와 함께 외부로 빠져나왔습니다. 이제 코드가 별로 아름답지 못해보입니다. 중괄호 안에 모든것이 옹기종기 모여있던 객체의 모습과 거리가 멀어졌습니다.
+      // 2. "보편적인 객체지향 코드의 모습과 차이"가 있습니다. 그 이유는 바로 자바스크립트가 무엇인지 잘 모르는 다른 언어의 프로그래머들입니다. 이들은 prototype이 뭔지 모릅니다! 심지어 prototype은 보통 함수에서는 의미가 없습니다! 오직 생성자 함수에서만 의미를 가지기 때문입니다. C++나 자바 혹은 파이썬을 전공한 프로그래머들에게 객체지향적으로 작성한 자바스크립트 코드를 보여주면 분명 멘붕에 빠질겁니다. 우선 class라는 키워드는 온데간데 없고 수상한 prototype 이라는 키워드만 잔뜩 보일테니까요.
+    </script>
+  </body>
+</html>
