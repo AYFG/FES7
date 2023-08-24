@@ -1,0 +1,20 @@
+// 실무 content 사용 용법
+@mixin sample {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  &:hover {
+    @content; //content의 사용은 이렇게 의도를 가지고 쓴다.
+  }
+}
+.one {
+  @include sample {
+    background-color: red;
+  }
+}
+.two {
+  @include sample {
+    background-color: green;
+  }
+}

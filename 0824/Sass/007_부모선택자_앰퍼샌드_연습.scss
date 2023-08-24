@@ -1,0 +1,29 @@
+// 우리가 원하는 결과물 , 반복문 + array 사용
+// .box-1 {
+//   background-color: red;
+// }
+// .box-2 {
+//   background-color: green;
+// }
+// .box-3 {
+//   background-color: blue;
+// }
+.box {
+  &-1 {
+    background-color: red;
+  }
+  &-2 {
+    background-color: green;
+  }
+  &-3 {
+    background-color: blue;
+  }
+}
+div {
+  &:hover {
+    background-color: red;
+  }
+}
+// div:hover {
+//     background-color: red;
+// }
