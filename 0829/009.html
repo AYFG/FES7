@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <script>
+      // Keyup 🆚 Keydown
+
+      // # keyup
+
+      // - 키를 눌렀다 놓는 시점에 실행. → **종료** 시점을 알수 있음.
+      // - 어떤 키를 눌렀는지 확인가능 / 모든 키에 대해서 발생
+
+      //   document.addEventListener("keyup", (e) => {
+      //     console.log("keyup:", e.code);
+      //     console.log("keyup:", e.key);
+      //     console.log("keyup:", e.keyCode);
+      //   });
+
+      // ## `e.key`
+
+      // - 키 값을 문자열로 반환.
+      // - a → `a` 로 반환
+      // - shift → `Shift` 로 반환
+      // ## `e.code`
+
+      // - 키 값을 문자열로 반환.
+      // - a → `KeyA` 로 반환
+      // - shift → `shiftLeft` 로 반환
+
+      //   # keydown
+      document.addEventListener("keydown", (e) => {
+        console.log("keyup:", e.key);
+      });
+      //       - 키를 누른 시점에 실행. 누르고 있는 동안에 계속 실행 → **시작** 시점을 알수 있음
+      //     - But, **ctrl, shift, alt, cmd, CapsLock  1번만 실행!**
+      // - 어떤 키를 눌렀는지 확인가능 / 모든 키에 대해서 발생
+
+      // ## `e.ctrlKey`, `e.shiftKey`, `e.altKey`, `e.metaKey`
+
+      // - ctrl, shift, alt, meta(cmd, window)
+      // - 해당키를 누르고 있는지를 true/false 값으로 반환
+      // - 보통 ctrl과 shift는 다른 키와 같이 누르는 형태로 많이 사용
+      //     - ex) shift + tab
+      // - keyup의 경우는 종료시점에 알수 있기 때문에 shift를 누르면서 tab을 누르는 상황에 적합하지 않음.
+
+      // # ~~keypress~~
+      // document.addEventListener("keypress", (e) => {
+      // console.log('keypress:', e.key);
+      // });
+      // - **더이상 권장하지 않음**
+      // - 키를 누르고 있는 동안에 계속 발생.
+      // - 입력된 **문자만** 나타냄
+
+      //   input
+      document.querySelector("input").addEventListener("input", function (e) {
+        console.log(e.data);
+      });
+    </script>
+  </body>
+</html>

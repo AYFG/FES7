@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <ul>
+      <li>0: hello <strong>world</strong></li>
+      <li class="item">1: hello world</li>
+      <li class="item">2: hello world!</li>
+      <li>3: <strong>hello</strong> world</li>
+      <li>4: hello world!</li>
+      <li>5: hello world</li>
+      <li>6: hello world</li>
+      <li style="display: none">7: hello world</li>
+      <li></li>
+    </ul>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+      $("li").eq(3).css("color", "blue");
+      document.querySelector("li:nth-child(4)").style.color = "red";
+      $("li").not(":eq(3)").css("text-decoration", "underline");
+      document.querySelectorAll("li").forEach((el, i) => {
+        if (i != 3) {
+          el.style.color = "green";
+        }
+      });
+      $("li:lt(3)").css("color", "blue");
+      $("li:gt(5)").css("color", "red");
+
+      $("[class]").css("border", "1px solid green");
+      //   jQuery
+      $("li:contains('!')").css("background-color", "skyblue");
+
+      document.querySelectorAll("li").forEach((el) => {
+        // JS 방법 1. : includes
+        // if (el.textContent.includes("!")) {
+        //   el.style.backgroundColor = "gold";
+        //   방법 2 : indexOf
+        if (el.textContent.indexOf("!") !== -1) {
+          el.style.backgroundColor = "gold";
+        }
+      });
+
+      $("li:empty").css("background-color", "pink");
+
+      $("li:has('strong')").css("color", "pink");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <ul>
+      <li>list1</li>
+      <li>list2</li>
+      <li>list3</li>
+      <li>list4</li>
+    </ul>
+    <script>
+      // ## append()
+      // - 선택한 요소의 마지막 자식으로 요소 추가
+      //   $("ul").append("<li>list 추가</li>");
+      // ## appendTo()
+
+      //   - 요소를 선택한 요소의 마지막 자식으로 추가하기
+      $("<li>append list추가</li>").appendTo("ul");
+
+      //const ulEl = document.querySelector('ul');
+      // const liEl = document.createElement('li');
+      // liEl.textContent = 'list추가';
+      // ulEl.appendChild(liElement)
+
+      //   ## prepend()
+      // - 선택한 요소의 첫번째 자식으로 요소 추가하기
+      $("ul").prepend("<li>prepend(insertBefore) list추가</li>");
+      //   liEl.textContent = "list추가";
+      //   ulEl.insertBefore(liEl, ulEl.firstChild);
+
+      //   ## before()
+      // - 선택한 요소의 앞에 형제요소로 추가하기
+      //   $("ul").before("<p>before</p>");
+      //   const pElb = document.createElement("p");
+      //   pElb.textContent = "before";
+      //   pElb.textContent = "after";
+      //   ulEl.parentNode.appendChild(pEl, ulEl);
+
+      //   ## after()
+      // - 선택한 요소의 뒤에 형제요소로 추가하기
+      //   $("ul").after("<p>after</p>");
+      //   const pEla = document.createElement("p");
+      //   pEla.textContent = "after";
+      // pEla.textContent = 'after';
+      // ulEl.parentNode.appendChild(pEl, ulEl);
+    </script>
+  </body>
+</html>
