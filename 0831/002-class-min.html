@@ -1,0 +1,29 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title></title></head><body><script>class Robot {
+        // #password;
+        constructor(name, pw) {
+          this.name = name;
+          this.password = pw;
+          //   this.#password = pw;
+        }
+
+        sayYourName() {
+          console.log(`삐리비리. 제 이름은 ${this.name}입니다. 주인님.`);
+        }
+
+        get password() {
+          return this.password;
+          //   return this.#password;
+        }
+        //  이 밑에 이름과 위에 #이 붙어서 이름이 달라서 오류가 안난다
+        // 이름만 다르게 해주면 된다
+        set password(pw) {
+            //여기서 콜백이 반복되어 Maximum call 오류가 난다
+            this.password = pw;
+            // 왜 #을 붙이면 오류가 안나지?
+          //   this.#password = pw;
+        }
+      }
+
+
+      const robot = new Robot("lion", 1234);
+      console.log(robot.password);</script></body></html>
