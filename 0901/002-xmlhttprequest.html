@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>XMLHttpRequest</title>
+  </head>
+  <body>
+    <button class="btn">통신 시작!</button>
+    <p class="p"></p>
+    <script>
+      const xhrobj = new XMLHttpRequest();
+      xhrobj.open("GET", "message.txt");
+      const btn = document.querySelector(".btn");
+      const txt = document.querySelector(".p");
+      btn.addEventListener("click", xhrRequest);
+
+      function xhrRequest() {
+        xhrobj.onreadystatechange = () => {
+          if (xhrobj.readyState === 4 && xhrobj.status == "200") {
+            const result = xhrobj.responseText;
+            txt.textContent = result;
+          } else {
+            console.log("fail");
+          }
+        };
+        xhrobj.send();
+      }
+    </script>
+  </body>
+</html>

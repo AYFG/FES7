@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>callback</title>
+  </head>
+  <body>
+    <script>
+      // 이런 방식은 불가능합니다. result와 result2에 무슨 값이 들어있을지 생각해보세요.
+      //   const res = 비동기통신함수();
+      //   const res2 = 비동기통신함수2();
+      //   const total = res + res2;
+
+      let result;
+
+      function xhrRequest() {
+        const requestObj = new XMLHttpRequest();
+        requestObj.open("GET", "message.txt");
+        requestObj.onreadystatechange = () => {
+          if (requestObj.readyState === 4 && requestObj.status === 200) {
+            result = requestObj.responseText;
+            console.log(result); // 콘솔에 무엇이 찍히는지 확인해봅시다. // 안녕하세요
+          }
+        };
+        requestObj.send();
+      }
+
+      xhrRequest();
+      console.log(result); // 콘솔에 무엇이 찍히는지 확인해봅시다. // undefined
+    </script>
+  </body>
+</html>
