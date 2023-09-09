@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      #canvas {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="canvas" width="400" height="400"></canvas>
+    <script>
+      const canvas = document.getElementById("canvas"); // querySelector보다 좁은 범위를 찾는 getID로 성능 챙기기
+
+      //   canvas 요소의 drawing context 객체를 가져온다. 그림을 그리는데 필요한 방법을 제공하는 객체이다. 3D = webgl
+      const ctx = canvas.getContext("2d");
+
+      // 1. 사각형 그리기 (X축의 위치 , Y축의 위치 , 너비 , 높이)
+      ctx.fillStyle = "tomato";
+      ctx.fillRect(30, 40, 30, 40);
+      ctx.fillStyle = "gray";
+      ctx.fillRect(50, 60, 100, 40);
+      ctx.fillStyle = "aqua";
+      ctx.fillRect(100, 100, 30, 40);
+
+      //   2. 직선 그리기
+      // 새로운 선을 그릴것을 알립니다.
+      ctx.beginPath();
+      // 선의 색상
+      ctx.strokeStyle = "green";
+      // 선의 두께
+      ctx.lineWidth = 10;
+      // 선의 시작 지점을 지정한다.
+      ctx.moveTo(20, 30);
+      // 선의 끝 지점을 지정한다
+      ctx.lineTo(150, 300);
+      // 화면에 선을 그립니다.
+      ctx.stroke();
+
+      //   3. 원 그리기
+      ctx.beginPath();
+      ctx.strokeStyle = "pink";
+      //   원을 그리는 메소드
+      ctx.lineWidth = 10;
+      //   원의 중심의 X축 ,Y축 좌표 , 반지름의 길이 , 시작 각도 , 종료 각도 , 도(deg)X 라디안 O
+      //   1 라디안은 반지름과 동일한 길이의 호(곡선)를 그렸을 때의 각도를 의미한다.
+      ctx.arc(200, 200, 30, 0, Math.PI * 2);
+      // 테두리 싫으면 stroke를 주석
+      ctx.stroke();
+      // 원의 내부 색 채우기
+      ctx.fillStyle = "yellow";
+      ctx.fill();
+    </script>
+  </body>
+</html>
