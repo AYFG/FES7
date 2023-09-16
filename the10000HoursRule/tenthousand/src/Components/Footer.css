@@ -1,0 +1,24 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+.notosanskr * {
+  font-family: "Noto Sans KR", sans-serif;
+}
+.Footer_copyright {
+  color: #fff;
+  text-align: center;
+  font-family: Noto Sans KR;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 2rem;
+}
+.Footer_wrapper {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  margin-top: 13rem;
+}
+.Footer_Logo {
+  height: 2.5rem;
+}

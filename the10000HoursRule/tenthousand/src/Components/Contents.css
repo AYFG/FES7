@@ -1,0 +1,115 @@
+@font-face {
+  font-family: "GmarketSansMedium";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+button {
+  border: none;
+}
+.Contents_h1 {
+  color: #fff;
+  font-size: 1.8rem;
+  /* height: 8.5rem; */
+  /* margin: 0 auto; */
+  line-height: 1.7rem;
+  display: flex;
+  flex-direction: column;
+  font-weight: 400;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4rem;
+}
+
+.Contents_emphasis {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.Contents_group {
+  margin-top: 9rem;
+  color: #fff;
+}
+.Contents_group_inner1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 7rem;
+}
+.Contents_group_inner2 {
+  display: flex;
+  align-items: center;
+}
+.Contents_Wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 2.4em;
+  font-family: GmarketSansMedium;
+}
+.Contents_Input {
+  margin: 1.7rem 2.7rem;
+  border: none;
+  width: 22.8rem;
+  height: 5.7rem;
+  border-radius: 0.7rem;
+  justify-content: center;
+  font: inherit;
+  font-size: 2rem;
+  text-align: left;
+  padding-left: 2rem;
+  /* box-sizing: border-box; */
+}
+
+.Contents_Btn {
+  border-radius: 56px;
+  background: #fcee21;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  width: 56.5rem;
+  margin: auto;
+  color: #5b2386;
+  text-align: center;
+  font-size: 2.4rem;
+  font-family: GmarketSansMedium;
+  font-weight: 700;
+  padding: 2.1rem 4.9rem;
+  white-space: nowrap;
+  margin-top: 6.5rem;
+}
+.Contents_result {
+  color: #fff;
+  margin-top: 15rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.result_emphasis {
+  font-size: 7.2rem;
+  font-weight: 700;
+}
+.Contents_GoGo_SNS {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  margin-top: 12.7rem;
+  gap: 1rem;
+}
+.Contents_GoGo {
+  background-color: #fcee21;
+  font-size: 2.4rem;
+  color: #5b2386;
+  font-weight: 700;
+  padding: 2.1rem 4.9rem;
+  border-radius: 5.6rem;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+.Contents_SNS {
+  background-color: #fff;
+  border-radius: 5.6rem;
+  color: #5b2386;
+  font-weight: 700;
+  font-size: 2.4rem;
+  padding: 2.1rem 4.9rem;
+}
