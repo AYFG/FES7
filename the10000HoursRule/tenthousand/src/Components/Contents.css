@@ -11,8 +11,6 @@ button {
 .Contents_h1 {
   color: #fff;
   font-size: 1.8rem;
-  /* height: 8.5rem; */
-  /* margin: 0 auto; */
   line-height: 1.7rem;
   display: flex;
   flex-direction: column;
@@ -34,11 +32,16 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 7rem;
+  height: 6rem;
 }
 .Contents_group_inner2 {
   display: flex;
   align-items: center;
+}
+@media (max-width: 1200px) {
+  .Contents_group_inner2 {
+    flex-direction: column;
+  }
 }
 .Contents_Wrapper {
   display: flex;

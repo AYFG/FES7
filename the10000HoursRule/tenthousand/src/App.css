@@ -2,7 +2,7 @@ html {
   font-size: 62.5%;
 }
 body {
-  width: 100vw;
+  /* width: 100vw; */
   display: flex;
   justify-content: center;
   background: #5b2386;

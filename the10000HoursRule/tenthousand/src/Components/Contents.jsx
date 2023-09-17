@@ -28,8 +28,14 @@ function Contents_input() {
       <div className="Contents_group_inner2">
         <br />
         <span>그래서 앞으로 매일 하루에</span>
-        <input type="text" placeholder="예)5시간" className="Contents_Input" />
-        <span>시간씩 훈련할 것이다.</span>
+        <div>
+          <input
+            type="text"
+            placeholder="예)5시간"
+            className="Contents_Input"
+          />
+          <span>시간씩 훈련할 것이다.</span>
+        </div>
       </div>
     </div>
   );
