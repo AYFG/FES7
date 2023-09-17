@@ -2,6 +2,8 @@ import HeaderLogo from "./Components/HeaderLogo";
 import Contents from "./Components/Contents";
 import Footer from "./Components/Footer";
 import Form from "./Components/Form";
+import React, { useState } from "react";
+
 import "./App.css";
 function App() {
   return (
@@ -18,4 +20,5 @@ function App() {
 // Contents_Btn을 클릭하면 결과 출력
 
 // Contents_GoGo를 누르면 Form_modal 출력 (스크롤이 가능하고 바깥이나 Form_btn_GoGo를 누르면 닫기)
+// Contents_SNS를 누르면 URL을 복사해줌
 export default App;

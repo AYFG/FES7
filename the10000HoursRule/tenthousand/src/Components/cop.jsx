@@ -14,9 +14,7 @@ function Contents_h1() {
 }
 
 function Contents_input_pro({ data, setData }) {
-  // 인풋 밸류 받아오기
   let onChange = (e) => {
-    // console.log(e.target.value);
     setData(e.target.value);
   };
   return (
@@ -33,10 +31,10 @@ function Contents_input_pro({ data, setData }) {
     </div>
   );
 }
+
 function Contents_input_time({ training, setTraining }) {
   let onChange2 = (e) => {
-    // console.log(e.target.value);
-    setTraining(e.target.value);
+    setTraining(parseInt(e.target.value));
   };
   return (
     <div className="Contents_group_inner2">
@@ -55,6 +53,7 @@ function Contents_input_time({ training, setTraining }) {
     </div>
   );
 }
+
 function Contents_input({ data, setData, training, setTraining }) {
   return (
     <div className="Contents_group">
@@ -63,23 +62,28 @@ function Contents_input({ data, setData, training, setTraining }) {
     </div>
   );
 }
-function Contents_Btn({ onClick, training }) {
+
+function Contents_Btn({ onClick }) {
   return (
     <button className="Contents_Btn" onClick={onClick}>
       나는 며칠 동안 훈련을 해야 1만 시간이 될까?
     </button>
   );
 }
-function Contents_result({ changeText, setChangeText, training }) {
+
+function Contents_result({ changeText, training }) {
   let TrainingEvent = () => {
     if (training > 24) {
-      return alert("24이하의 숫자를 입력해주세요.");
-    } else if (training < 0) {
-      return alert("0이상의 숫자를 입력해주세요.");
+      alert("24 이하의 숫자를 입력해주세요.");
+      return ""; // 유효하지 않은 입력의 경우 빈 문자열 반환
+    } else if (training <= 0) {
+      alert("1 이상의 숫자를 입력해주세요.");
+      return ""; // 유효하지 않은 입력의 경우 빈 문자열 반환
     } else {
-      return 10000 / training;
+      return Math.ceil(10000 / training); // 계산 결과 반환
     }
   };
+
   return (
     <div className="Contents_result">
       <p>
@@ -87,8 +91,11 @@ function Contents_result({ changeText, setChangeText, training }) {
         되기 위해서
       </p>
       <p>
-        대략 <span className="result_emphasis">{TrainingEvent()}</span> 일 이상
-        훈련하셔야 합니다! :)
+        대략{" "}
+        <span className="result_emphasis">
+          {TrainingEvent() !== "" ? 10000 / training : ""}
+        </span>{" "}
+        일 이상 훈련하셔야 합니다! :)
       </p>
     </div>
   );
@@ -106,13 +113,16 @@ function Contents_GoGo_SNS() {
     </div>
   );
 }
+
 export default function Contents() {
   const [data, setData] = useState("");
   const [changeText, setChangeText] = useState("프로그래머");
-  const [training, setTraining] = useState(1);
+  const [training, setTraining] = useState("");
+
   const btnEvent = () => {
     setChangeText(data);
   };
+
   return (
     <div className="Contents_Wrapper">
       <Contents_h1 />
@@ -123,7 +133,7 @@ export default function Contents() {
         setTraining={setTraining}
       />
       <Contents_Btn onClick={btnEvent} />
-      <Contents_result changeText={changeText} />
+      <Contents_result changeText={changeText} training={training} />
       <Contents_GoGo_SNS />
     </div>
   );

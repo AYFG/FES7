@@ -6,21 +6,18 @@
   font-style: normal;
 }
 .Logo {
-  /* position: relative; */
-  /* background-size: cover; */
-  /* background-position: center; */
-  /* display: flex; */
 }
 .Logo_BackImg {
+  cursor: pointer;
   background-image: url(../img/clock.svg);
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: contain;
-  height: 225px;
+  height: 22.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top:7rem;
+  margin-top: 7rem;
 }
 
 .Logo_text {
@@ -29,7 +26,7 @@
   color: #f5df4d;
   text-align: center;
   font-family: OTEnjoystoriesBA;
-  font-size: 36px;
+  font-size: 3.6rem;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
