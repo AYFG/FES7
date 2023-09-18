@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Form.css";
 import Licat from "../img/Licat.png";
 
-function Traning() {
+function Traning({ closeModal }) {
   return (
-    <button className="Form_GoGo_btn">
+    <button className="Form_GoGo_btn" onClick={closeModal}>
       종료하고 진짜 훈련하러 가기 GO!GO!
     </button>
   );
@@ -22,12 +22,12 @@ function Fighting() {
   );
 }
 
-export default function Form() {
+export default function Form({ setModalShow }) {
   return (
     <div className="Form-backdrop">
       <div className="Form-modal">
         <Fighting />
-        <Traning />
+        <Traning closeModal={() => setModalShow(false)} />
       </div>
     </div>
   );

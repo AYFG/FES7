@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Footer.css";
 import WenivLogo from "../img/weniv.svg";
-
+import Form from "../Components/Form";
 function Footer_copyright() {
   return (
     <div>
@@ -14,9 +14,17 @@ function Footer_copyright() {
   );
 }
 
-export default function Footer() {
+export default function Footer({ openModal }) {
   return (
     <div className="Footer_wrapper">
+      <div className="Contents_GoGo_SNS">
+        <button type="button" className="Contents_GoGo" onClick={openModal}>
+          훈련하러 가기 GO!GO!
+        </button>
+        <button type="button" className="Contents_SNS">
+          공유하기
+        </button>
+      </div>
       <img src={WenivLogo} alt="" className="Footer_Logo" />
       <Footer_copyright />
     </div>
