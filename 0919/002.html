@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Timer</title>
+    <link rel="stylesheet" href="reset.css" />
+    <style>
+      @font-face {
+        font-family: "Pretendard-Regular";
+        src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+          format("woff");
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      .wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: Pretendard-Regular;
+        width: 100%;
+        height: 100vh;
+        background: var(
+          --gradient2,
+          radial-gradient(
+            293.21% 130.49% at 3.59% 5.28%,
+            #f0f4ff 0%,
+            #a5b6ee 100%
+          )
+        );
+      }
+      .logo_img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 244px;
+        height: 48px;
+      }
+
+      .timer_wrapper {
+        width: 400px;
+        height: 360px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 16px;
+        background: var(
+          --gradient,
+          linear-gradient(144deg, #5572bb 2.13%, #374b7c 102.97%)
+        );
+
+        /* shadow */
+        box-shadow: 20px 20px 60px 10px rgba(55, 75, 124, 0.4);
+      }
+
+      .timer_h2 {
+        font-size: 24px;
+        display: flex;
+        justify-content: center;
+        color: #fff;
+        padding: 10px;
+        margin: 48px 0 23px;
+        border-bottom: 1px solid #3d538a;
+      }
+
+      .box {
+        display: flex;
+        /* flex-direction: row; */
+        /* justify-content: space-between; */
+      }
+
+      .Timer {
+        color: #fff;
+        display: inline;
+        text-align: center;
+        padding-top: 20px;
+        margin: 25px;
+        width: 80px;
+        height: 80px;
+        font-size: 40px;
+        font-weight: bold;
+        background-image: url(./img/box.svg);
+        background-repeat: no-repeat;
+        position: relative;
+      }
+
+      .btnGroup {
+        display: flex;
+        color: #fff;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+      }
+      .start {
+        /* display: block; */
+        width: 112px;
+        color: #fff;
+        font-family: Pretendard-Regular;
+        height: 48px;
+        background-color: #5180ff;
+        border-radius: 50px;
+        cursor: pointer;
+      }
+      .hrs::after,
+      .min::after {
+        content: "";
+        background-image: url(./img/dot.png);
+        width: 6px;
+        height: 26px;
+        position: absolute;
+        top: 40%;
+        right: -40%;
+        transform: translate(-50%, -50%);
+      }
+      .start span,
+      .reset span {
+        vertical-align: top;
+        padding-left: 5px;
+      }
+      .reset {
+        width: 112px;
+        color: #fff;
+        font-family: Pretendard-Regular;
+        height: 48px;
+        background-color: #fb7099;
+        border-radius: 50px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <h1 class="logo_img">
+        <img src="./img/weniv-logo (1).svg" alt="weniv" />
+      </h1>
+      <div class="timer_wrapper">
+        <h2 class="timer_h2">TIMER</h2>
+
+        <div class="box">
+          <span id="hrs" class="Timer hrs">00</span>
+
+          <span id="min" class="Timer min">00</span>
+
+          <span id="sec" class="Timer sec">00</span>
+        </div>
+        <div class="btnGroup">
+          <button class="start">
+            <img src="./img/icon-start.png" alt="" /><span>START</span>
+          </button>
+          <button class="reset">
+            <img src="./img/icon-reset.png" alt="" /><span>RESET</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let num = 0;
+      const hrs = document.getElementById("hrs");
+      const min = document.getElementById("min");
+      const sec = document.getElementById("sec");
+      document.addEventListener("DOMContentLoaded", () => {
+        sec.addEventListener("click", () => {
+          num += 1;
+          sec.textContent = num;
+        });
+      });
+
+      const start = document.querySelector(".start");
+      start.addEventListener("click", () => {
+        setInterval(() => {
+          sec -= 1;
+          sec.textContent = sec;
+          if (sec === 0) {
+            clearInterval(sec);
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
