@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>투두리스트~</title>
+  </head>
+  <body>
+    <script>
+      // 간단한 TodoList 구현 해보기
+      /*
+             1.Todo 클래스
+             -> 일의 내용 , 일의 상태(일이 끝났는지,아닌지), 이 두가지 프로퍼티를 가진다.
+             -> 일의 상태를 변경하는(finished:true,false) 메서드가 있다.
+
+             2.TodoManager 클래스
+             -> 일의 리스트 프로퍼티 (배열)
+             -> 할 일을 저장하는 메소드(addItem()) , 할 일의 목록을 보여주는 메소드(getItem()) , 할 일의 남은 "갯수(getLeftTodoCount())"를 보여주는 메소드 (안끝난 할 일만  뽑아 보여주기)
+
+         */
+      //   class Todo {
+      //     constructor(item, finished) {
+      //       this.item = item;
+      //       this.finished = true || false;
+      //     }
+      //     changeState() {
+      //       if (this.finished === false) {
+      //         return this.finished === true;
+      //       } else {
+      //         this.finished === false;
+      //       }
+      //     }
+      //   }
+      //   class TodoManager extends Todo {
+      //     constructor() {
+      //       super();
+      //       this.todoList = [];
+      //     }
+
+      //     addItem(item) {
+      //       return todoList.push(item);
+      //     }
+      //     getItem() {}
+      //     getLeftTodoCount() {}
+      //   }
+      //   const todos = new Todo();
+      //어려워잉.
+
+      // 강사님과 만드는 todolist
+      class Todo {
+        constructor(item, finished) {
+          this.item = item; // 할 일의 내용
+          this.finished = finished; // 할 일의 상태
+        }
+
+        changeStatus() {
+          // 할 일의 상태를 변경
+          this.finished = !this.finished;
+        }
+      }
+      class TodoManager {
+        constructor() {
+          this.todoList = [];
+        }
+        // 할일을 추가하기
+        addItem(item, finished = false) {
+          const todo = new Todo(item, finished);
+          this.todoList.push(todo);
+        }
+        // 할 일의 목록을 반환하기
+        getItem() {
+          return this.todoList;
+        }
+        // 할 일의 남은 갯수를 보여주는 메소드
+        getLeftTodoCount() {
+          return this.todoList.filter((item) => item.finished === false).length;
+        }
+      }
+      const manager = new TodoManager();
+    </script>
+  </body>
+</html>
