@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <script>
+      // 1.리듀서는 여러개일 수 있다
+      const rootReducer = combineReducers({
+        aReducer,
+        bReducer,
+        cReducer,
+        dReducer,
+        eReducer,
+      });
+
+      // 2.단일 스토어로 관리한다 상태가 한 개 이상이라면 관리해야 하는 모든 상태는 하나의 스토어 안에서 객체 구조나 배열 형태로 저장해서 사용한다.
+
+      // 3.state는 읽기 전용이다 .state는 기존 state는 수정하지 않고 새로운 state 객체를 통해 업데이트 해야 이전 상태에 대한 데이터 추적이 가능하다.
+
+      // 4.데이터에 따라 선택적 갱신이 가능하다
+      // context는 가지고 있는 state가 하나만 변경되어도 context의 값을 가지고 있는 모든 컴포넌트가 리렌더링이 되어버린다.리덕스는 선택적 갱신이 가능하다.
+      //렌더 함수가 구독하고 있는 state의 값이 변경되었을 때만 컴포넌트를 리렌더링 한다/
+
+      // 5.순수 함수로 작성되어야 한다.
+      //state의 값을 업데이트 하는 유일한 방법인 reducer 함수는 반드시 순수 함수로 만들어야 한다 순수함수란 동일한 아규먼트라면 동일한 return 값을 반환하는 함수를 의미한다 이전 state와 액션 객체 파라미터에 대해서만 의존해야 한다 파라미터 외의 값들(외부 변수 등)에 영향을 받으면 안된다
+    </script>
+  </body>
+</html>
