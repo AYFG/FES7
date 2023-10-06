@@ -28,6 +28,7 @@ export default function LoginPage() {
     console.log(json);
     const token = json.user.token;
     console.log(token);
+    // 로컬 스토리지에 토큰 저장하기
     localStorage.setItem("token", token);
   };
 
