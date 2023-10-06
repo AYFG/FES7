@@ -7,6 +7,7 @@ export default function LoginPage() {
   const login = async (email, password) => {
     const baseUrl = "https://api.mandarin.weniv.co.kr";
     const reqPath = "/user/login";
+    const reqUrl = baseUrl + reqPath;
 
     const loginData = {
       user: {
@@ -14,22 +15,25 @@ export default function LoginPage() {
         password: password,
       },
     };
-    // 로그인 요청 부분 로그인해서 token 꺼내기
-    const reqUrl = baseUrl + reqPath;
-    const res = await fetch(reqUrl, {
-      method: "POST",
-      headers: {
-        "Content-type": "application/json",
-      },
-      //   body: loginData,
-      body: JSON.stringify(loginData),
-    });
-    const json = await res.json();
-    console.log(json);
-    const token = json.user.token;
-    console.log(token);
-    // 로컬 스토리지에 토큰 저장하기
-    localStorage.setItem("token", token);
+    try {
+      // 로그인 요청 부분 로그인해서 token 꺼내기
+      const res = await fetch(reqUrl, {
+        method: "POST",
+        headers: {
+          "Content-type": "application/json",
+        },
+        //   body: loginData,
+        body: JSON.stringify(loginData),
+      });
+      const json = await res.json();
+      console.log(json);
+      const token = json.user.token;
+      console.log(token);
+      // 로컬 스토리지에 토큰 저장하기
+      localStorage.setItem("token", token);
+    } catch (error) {
+      alert("로그인에 실패했습니다");
+    }
   };
 
   const inputEmail = (e) => {
