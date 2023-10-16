@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <script>
+      //  시작노드 방문하기
+      //  시작노드를 스택에 넣고
+      //  스택에서 팝
+      //  팝한 값이 커런트가 됨
+      //  시작 노드를 방문하게 됨
+      //  시작노드의 인접노드를 스택에 넣는다
+      //  스택에서 팝
+      //  팝한 값이 커런트가 됨
+      //  커런트가 방문한 적이 있는지 확인해야한다
+      //  커런트를 방문 목록에 넣는다
+      //  커런트의 인접노드를 스택에 푸시한다
+      //   모든 노드에 방문할 때까지 반복
+      function DFS(graph, start) {
+        const visited = [];
+        let stack = [start];
+
+        while (stack.length !== 0) {
+          const current = stack.pop();
+          // 현재 노드가 방문한 목록에 없으면
+          if (visited.indexOf(current) === -1) {
+            visited.push(current);
+            // 방문한적 없는 노드들만 필터
+            const neighbors = graph[current].filter(
+              (n) => visited.indexOf(n) === -1
+            );
+            stack.concat(neighbors);
+          }
+        }
+        return visited;
+      }
+
+      const graph = {
+        0: [1, 2, 3],
+        1: [4, 5],
+        2: [],
+        3: [],
+        4: [6],
+        5: [],
+        6: [],
+      };
+      const result = DFS(graph, 6);
+      console.log(result); //[0, 1, 4, 6, 5, 2, 3]
+    </script>
+  </body>
+</html>
