@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>점진적 향상기법</title>
+  </head>
+  <style>
+    .layout-grid {
+      display: grid;
+    }
+    .layout-flex {
+      display: flex;
+    }
+  </style>
+  <body>
+    <div class="container"></div>
+    <picture>
+      <source srcset="test.webp" type="image/webp" />
+      <source srcset="test.avif" type="image/avif" />
+      <img src="test.jpeg" alt="test image" />
+      <!-- 더나은 사용자 경험을 위해 최신 브라우저 사용자, 구형 브라우저 사용자를 둘 다 챙기기 위한 방법  -->
+    </picture>
+
+    <script>
+      const container = document.querySelector(".container");
+      console.log(container.style);
+      //   그리드를 지원하는 브라우저
+      if (container.style.grid !== undefined) {
+        container.classList.add("layout-grid");
+        //   그리드를 지원하지 않는 브라우저
+      } else {
+        container.classList.add("layout-flex");
+      }
+      //   우아한 성능저하?
+    </script>
+  </body>
+</html>
